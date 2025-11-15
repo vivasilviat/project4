@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Alice's Adventures in Wonderland | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ewert&family=Fontdiner+Swanky&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Extras just for the intro (home) page -->
+    <style>
+      .intro-title {
+        letter-spacing: 0.12em;
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        font-family: "Ewert", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .intro-subtitle {
+        text-align: center;
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+      }
+
+      .intro-image {
+        margin: 1.5rem auto 1rem;
+        max-width: 22rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+      }
+
+      /* Only the HOME page gets the parchment background */
+      body.home .page-content {
+        background-image: url("alice-in-wonderlandDarkmoon_Art.jpg");
+        background-size: 100% auto; /* full width, natural height */
+        background-position: center top;
+        background-repeat: repeat-y; /* repeat down the page */
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      /* Soft panel behind intro text so it stays readable */
+      body.home .story-column {
+        background-color: rgba(252, 250, 245, 0.88);
+        padding: 2rem 2rem 3rem;
+        border-radius: 1.1rem;
+      }
+    </style>
+  </head>
+
+  <body class="home">
+    <header class="site-header">
+      <div class="site-title">Alice's Adventures in Wonderland</div>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+      </nav>
+    </header>
+
+    <main class="spread">
+      <!-- left decorative panel -->
+      <aside class="side-panel left" aria-hidden="true"></aside>
+
+      <!-- center page -->
+      <section class="page-content">
+        <div class="story-column">
+          <header>
+            <h1 class="intro-title">Welcome to Wonderland</h1>
+            <p class="intro-subtitle">
+              Begin your journey where curiosity first stirred, and follow Alice as her ordinary afternoon unfolds into
+              something wonderfully impossible.
+            </p>
+          </header>
+
+          <div class="intro-image">
+            <img src="mushroom_adege.jpg" alt="Mushroom on the ground" />
+            Mushroom by
+            <a
+              href="https://pixabay.com/photos/beautiful-foot-boletus-mushroom-2586702/"
+              target="_blank"
+              rel="noopener">
+              adege, Pixabay
+            </a>
+          </div>
+
+          <p>
+            It began on an ordinary afternoon – sunlight, a quiet riverbank, a book with no pictures, and a girl
+            drifting toward sleep. Nothing strange at all… until a white rabbit rushed by, muttering about being late.
+          </p>
+
+          <p>
+            Curiosity pulled Alice after him, down a deep well and into a world where very few things stay the size they
+            started. Doors shrink, hallways stretch, animals argue, and tears can turn into oceans. Wonderland is a
+            place where questions don’t behave and rules change with every step.
+          </p>
+
+          <p>
+            If you’re ready to follow Alice through locked doors, growing spells, puzzled creatures, and races with no
+            beginning or end, then step inside. Wonderland is waiting for you.
+          </p>
+
+          <!-- Start button + bottom nav -->
+          <p style="text-align: center">
+            <a class="start-button" href="chapter1.html">Start Chapter 1 →</a>
+          </p>
+
+          <nav class="bottom-nav" aria-label="Chapter navigation">
+            <a href="index.html">Home</a>
+            <a href="chapter1.html">Chapter 1</a>
+            <a href="chapter2.html">Chapter 2</a>
+            <a href="chapter3.html">Chapter 3</a>
+          </nav>
+
+          <footer class="site-footer">
+            <p>&copy; 2025 Silvia Tsang</p>
+
+            <p>
+              Text and images from
+              <em>Alice's Adventures in Wonderland</em>, public domain.
+            </p>
+
+            <p>
+              Background images by
+              <a
+                href="https://pixabay.com/illustrations/alice-in-wonderland-frame-fairy-tale-3191346/"
+                target="_blank"
+                rel="noopener">
+                Darkmoon_art (Pixabay)
+              </a>
+              and
+              <a
+                href="https://pixabay.com/illustrations/flower-corolla-wreath-lease-spring-4865379/"
+                target="_blank"
+                rel="noopener">
+                Kollsd (Pixabay) </a
+              >.
+            </p>
+
+            <p>
+              Mushroom photo by
+              <a
+                href="https://pixabay.com/photos/beautiful-foot-boletus-mushroom-2586702/"
+                target="_blank"
+                rel="noopener">
+                Adege (Pixabay) </a
+              >.
+            </p>
+
+            <p>Fonts: Shantell Sans, Ewert, & Fontdiner Swanky from Google Fonts.</p>
+          </footer>
+        </div>
+      </section>
+
+      <!-- right decorative panel -->
+      <aside class="side-panel right" aria-hidden="true"></aside>
+    </main>
+  </body>
+</html>
