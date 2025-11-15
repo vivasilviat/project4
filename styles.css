@@ -1,0 +1,240 @@
+/* ========== Base ========== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base background for all pages */
+body {
+  margin: 0;
+  background-color: #e3efe7;
+  font-family: "Shantell Sans", cursive;
+  line-height: 1.5;
+}
+
+/* ========= Chapter pages: body background ========= */
+body.chapter {
+  background-image: url("flower_frame_Kollsd.png");
+  background-position: top center;
+  background-repeat: repeat-y; /* frame repeats downward */
+  background-size: 100% auto; /* full width, natural height */
+  background-color: #e3efe7;
+}
+
+/* ========== Header and top navigation ========== */
+
+.site-header {
+  background-color: rgba(255, 243, 214, 0.88);
+  border-bottom: 1px solid #d5cfbf;
+  padding: 0.75rem 1.5rem 0 1.5rem;
+}
+
+.site-title {
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.06em;
+  color: #a4e1dc;
+  text-shadow:
+    1px 1px 2px #315138,
+    0 0 25px #c475e9,
+    0 0 5px #748a89;
+}
+
+.top-nav {
+  display: flex; /* Flexbox requirement */
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.top-nav a {
+  color: #34503a;
+  text-decoration: none;
+  padding: 20px 40px;
+}
+
+.top-nav a:hover,
+.top-nav a:focus {
+  text-decoration: underline;
+}
+
+/* ========== Page layout ========== */
+
+/* main reading panel */
+.page-content {
+  flex: 1.3 1 50%;
+  background-color: #fcfaf5;
+  padding: 2rem 1.5rem 3rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
+}
+
+/* narrow column to control line length */
+.story-column {
+  max-width: 650px;
+  margin: 0 auto;
+  background: rgba(255, 255, 245, 0.85);
+  border-radius: 0.6rem;
+  padding: 2rem;
+}
+
+/* ========== Typography ========== */
+
+h1 {
+  font-family: "Shantell Sans", cursive;
+  text-align: center;
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  color: dimgray;
+}
+
+h2 {
+  font-family: "Shantell Sans", cursive;
+  text-align: center;
+  margin: 0.6rem 0 1.6rem;
+  font-size: 1.4rem;
+  color: dimgray;
+}
+
+p {
+  text-align: left;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  color: #6e6969;
+}
+
+/* links */
+a {
+  color: #2f8682;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* ========== Images and floats ========== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* float for wrapped text requirement */
+.float-right {
+  float: right;
+  margin: 0 1rem 1rem 1.5rem;
+}
+
+.float-left {
+  float: left;
+  margin: 0.5rem 1.2rem 0.3rem 0;
+}
+
+/* clearfix around floated content */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Index page: remove extra bottom margin on last paragraph in intro box */
+.story-column p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== Chapter page content overrides ========== */
+
+/* Main content area on chapter pages */
+body.chapter .page-content {
+  max-width: 42rem; /* readable line length */
+  margin: 3rem auto 4rem;
+  background-color: rgba(253, 247, 235, 0.8);
+  padding: 2.5rem 2.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Chapter text container (inside the cream panel) */
+body.chapter .story-column {
+  max-width: 650px;
+  margin: 0 auto;
+  background: rgba(255, 255, 245, 0.88);
+  padding: 2rem;
+  border-radius: 0.6rem;
+}
+
+/* ========= Bottom navigation, all pages ========= */
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem; /* spacing between Home / Chapter 1 / 2 / 3 */
+  margin: 2.5rem auto 1.5rem; /* auto centers the nav block */
+  padding-top: 1.5rem;
+  border-top: 1px solid #e3c8b5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+/* ========= Start button ========= */
+.start-button {
+  display: inline-block;
+  padding: 1rem 3rem;
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #40c891;
+  text-decoration: none;
+  border: 2px solid #5ac2ba;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.start-button:hover {
+  color: white;
+  background: #99dcad;
+}
+
+.start-button:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 70%);
+  animation: sparkle 0.6s ease-out;
+}
+
+@keyframes sparkle {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(2.5);
+  }
+}
+
+/* ========== Footer ========== */
+
+.site-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555555;
+  margin-top: 1.5rem;
+}
+
+.site-footer p {
+  margin: 0.2rem 0;
+}
